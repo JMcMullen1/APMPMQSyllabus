@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APM PMQ Syllabus</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; background: #f5f5fa; }
+        header { background: #1a1a2e; color: #fff; padding: 2rem; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.8; font-size: 1.1rem; }
+        nav { background: #16213e; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+        nav a { color: #a8b2d1; text-decoration: none; margin-right: 1rem; font-size: 0.85rem; }
+        nav a:hover { color: #fff; }
+        main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+        .section-group { margin-bottom: 1.5rem; }
+        .section-group h2 { font-size: 1.1rem; color: #0f3460; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #0f3460; }
+        .objective { background: #fff; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden; }
+        .objective-header { background: #0f3460; color: #fff; padding: 0.75rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .objective-header h3 { font-size: 1rem; }
+        .objective-header .num { background: rgba(255,255,255,0.2); border-radius: 4px; padding: 0.1rem 0.5rem; margin-right: 0.75rem; font-size: 0.85rem; }
+        .objective-body { padding: 1rem 1.25rem; }
+        .objective-body .description { font-style: italic; color: #555; margin-bottom: 0.75rem; font-size: 0.95rem; }
+        .outcome { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+        .outcome:last-child { border-bottom: none; }
+        .outcome .label { font-weight: 600; color: #0f3460; margin-right: 0.25rem; }
+        .chevron { transition: transform 0.2s; font-size: 0.8rem; }
+        .objective.closed .objective-body { display: none; }
+        .objective.closed .chevron { transform: rotate(-90deg); }
+        footer { text-align: center; padding: 2rem; color: #888; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>APM Project Management Qualification (PMQ) Syllabus</h1>
+    <p>Association for Project Management &mdash; Full Learning Objectives &amp; Outcomes</p>
+</header>
+
+<nav id="nav"></nav>
+
+<main id="main"></main>
+
+<footer>
+    <p>APM PMQ Syllabus. Structured for reference and machine-readable consumption.</p>
+</footer>
+
+<script>
+const syllabus = [
+  {
+    group: "Projects",
+    objectives: [
+      {
+        num: 1, title: "Life cycles",
+        description: "Understand the distinct life cycle stages used to structure and organise a project.",
+        outcomes: [
+          "Understand the distinctive features of linear, iterative and hybrid life cycles (including why projects are structured as phases in linear life cycles) and know when each is applicable.",
+          "Knowledge of the differences between a project life cycle and an extended life cycle.",
+          "Understand how the context and culture of an organisation, and the needs of a specific project, influence the choice of life cycle and any adaptations that may be needed to the life cycle.",
+          "Knowledge of the strengths and limitations of different life cycles."
+        ]
+      },
+      {
+        num: 2, title: "Governance arrangements",
+        description: "Understand governance structures as a framework of authority and accountability for the delivery of a project, which align with organizational practice.",
+        outcomes: [
+          "Knowledge of different types of permanent and temporary organisation structures and their features (including functional, matrix, and project). And know that an organisation's governance approach will inform the approach used for a project.",
+          "Understand why there are distinct roles within project management and know the responsibilities of each role (including users, project team members, the project manager, the project steering group/board and the product owner). And understand the differences in responsibilities of the project manager and project sponsor throughout the project.",
+          "Understand why aspects of project management governance are required (such as the use of policies, regulations, functions, processes, procedures and delegated responsibilities). And understand the impact of a project's life cycle on its governance framework and the limits of financial authority.",
+          "Understand the importance of linking projects to an organisation's objectives."
+        ]
+      },
+      {
+        num: 3, title: "Sustainability",
+        description: "Understand sustainability as balancing the environmental, social, economic and administrative considerations that will impact a project.",
+        outcomes: [
+          "Understand why sustainability responsibilities, principles and priorities are considered within a project and the impact they may have.",
+          "Knowledge of how sustainability measures are monitored and reported on."
+        ]
+      },
+      {
+        num: 4, title: "Business case",
+        description: "Understand a business case as the justification for the initiation, investment and/or continuation of a project in terms of benefits, costs and risks.",
+        outcomes: [
+          "Knowledge of the tools and techniques used to determine factors which influence and impact a project's business case (including PESTLE, SWOT and VUCA).",
+          "Understand the importance of regularly reviewing the impact of any changes in a project to the business case. And know that the business case forms the baseline for the project."
+        ]
+      }
+    ]
+  },
+  {
+    group: "Preparing for Change",
+    objectives: [
+      {
+        num: 5, title: "Procurement",
+        description: "Understand procurement as securing the provision of resources, choosing strategies for obtaining best value from supply chains.",
+        outcomes: [
+          "Understand the purpose and importance of a procurement strategy. And know the typical contents of a procurement strategy.",
+          "Know the stages of a supplier selection process, including how to plan the procurement process and conduct negotiations (for example ZOPA, BATNA and 'Win Win').",
+          "Know the features of different contractual relationships. And understand why different methods of supplier reimbursement are used and when it is appropriate to use them (including fixed price, cost plus fee, per unit quantity and target cost)."
+        ]
+      },
+      {
+        num: 6, title: "Reviews",
+        description: "Understand reviews as a way of gathering information to provide an assessment on the status of a project and the ongoing viability of the work.",
+        outcomes: [
+          "Understand the benefits of conducting reviews throughout the life cycle (including decision gates, benefits reviews and audits).",
+          "Know the factors which would typically be reported on to help ensure successful project outcomes.",
+          "Understand the importance of producing information and collecting data to inform decision making and communicate actions and decisions to stakeholders.",
+          "Understand why activities may be re-planned after a review."
+        ]
+      },
+      {
+        num: 7, title: "Assurance",
+        description: "Understand assurance as the ability to provide confidence to the governance board that a project is on track to deliver objectives.",
+        outcomes: [
+          "Know the purpose of assurance within a project; including awareness of the scope, priorities and strategic aims of assurance activities."
+        ]
+      },
+      {
+        num: 8, title: "Transition management",
+        description: "Understand transition management as integration of the outputs of a project into business-as-usual.",
+        outcomes: [
+          "Know the basic requirements needed to support a successful transition, including considering business-as-usual throughout a project and planning for transition from the outset of the project.",
+          "Understand the importance of knowledge transfer in the transition process; this includes learning from experience and continuous improvement.",
+          "Understand how to engage stakeholders to agree a transition plan, including transfer of risks."
+        ]
+      },
+      {
+        num: 9, title: "Benefits management",
+        description: "Understand benefits management as monitoring of benefits realisation throughout a project.",
+        outcomes: [
+          "Understand what is meant by benefits management (including identification, definition, planning, tracking and realisation).",
+          "Understand the importance of aligning benefits with strategic objectives and ways in which the benefits of a project can be communicated to stakeholders."
+        ]
+      }
+    ]
+  },
+  {
+    group: "People and Behaviours",
+    objectives: [
+      {
+        num: 10, title: "Stakeholder engagement and communication management",
+        description: "Understand stakeholder engagement and communication management as the ability to work with people internally and externally to achieve intended outcomes.",
+        outcomes: [
+          "Understand the relationship between stakeholder analysis, influence and engagement.",
+          "Understand the relationship between stakeholder analysis and an effective communication management plan.",
+          "Understand the benefits to a project of a communication plan.",
+          "Understand the importance of managing stakeholder expectations to the success of the project.",
+          "Know the range of communication methods available and understand the importance of tailoring messaging to meet stakeholder requirements.",
+          "Know the factors which can positively or negatively affect communication."
+        ]
+      },
+      {
+        num: 11, title: "Conflict resolution",
+        description: "Understand conflict resolution as the ability to identify and address differences between individuals and/or interest groups.",
+        outcomes: [
+          "Know the sources of conflict within a project.",
+          "Understand that conflict can have both positive and negative impacts within a project.",
+          "Know ways in which conflict can be addressed in different situations (such as Thomas Kilmann Conflict Mode Instrument)."
+        ]
+      },
+      {
+        num: 12, title: "Leadership",
+        description: "Understand leadership as ways to empower and inspire others to deliver successful projects.",
+        outcomes: [
+          "Understand how leadership impacts on team performance and motivation (using models such as Maslow, Herzberg and McGregor).",
+          "Understand why it may be necessary to change leadership styles depending upon the situation.",
+          "Understand the importance of a coaching and mentoring style in leadership, and the role of emotional intelligence."
+        ]
+      },
+      {
+        num: 13, title: "Team management",
+        description: "Understand team management as the ability to work with team members to create and sustain teams.",
+        outcomes: [
+          "Know the different stages in the development of a team, including creation, development, maintenance and leadership, and understand the factors which influence these stages. And knowledge of the models that are used to understand team development (such as Belbin, Margerison McCann, Myers-Briggs, Hackman, Tuckman, Katzenbach and Smith).",
+          "Know the characteristics and benefits of effective teams and teamwork.",
+          "Understand why different leadership approaches are needed to support virtual and hybrid teams."
+        ]
+      },
+      {
+        num: 14, title: "Diversity and inclusion",
+        description: "Understand diversity and inclusion as the ability to build and maintain an inclusive environment that embraces a diverse culture.",
+        outcomes: [
+          "Knowledge of diversity, including characteristics which may cause a person to be treated less favourably, such as: age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex, and sexual orientation.",
+          "Understand why incorporating diversity into all parts of a project, from team members to customers, is a factor in creating a positive working environment. And understand the importance of embracing diverse thinking in teams as a means of generating innovative solutions.",
+          "Understand how conscious and unconscious bias can affect actions. And know how to treat people fairly, including adapting behaviours to support individuals' needs and facilitate their contributions."
+        ]
+      },
+      {
+        num: 15, title: "Ethics, compliance and professionalism",
+        description: "Understand ethics, compliance and professionalism as the ability to work consistently in a moral, legal and socially responsible manner.",
+        outcomes: [
+          "Understand the importance of continuing professional development, which should cover both knowledge, skills and behaviours, and the individual's role in identifying and addressing their own competence gaps.",
+          "Knowledge of the sources of specialist advice and standards that need to be adhered to.",
+          "Understand the impact of the legal and regulatory landscape on projects (such as the impact on working conditions, risk management, governance and sustainability)."
+        ]
+      }
+    ]
+  },
+  {
+    group: "Planning and Managing Deployment",
+    objectives: [
+      {
+        num: 16, title: "Requirements management",
+        description: "Understand requirements management as the ability to capture and monitor the requirements of a project.",
+        outcomes: [
+          "Understand how to establish scope through requirements management processes (such as gather, analysis, justifying requirements and baseline needs).",
+          "Understand how to manage scope through configuration management processes (such as planning, identification, control, status accounting and verification audit)."
+        ]
+      },
+      {
+        num: 17, title: "Solutions development",
+        description: "Understand solutions development as the ability to determine the optimal solution to satisfy agreed requirements.",
+        outcomes: [
+          "Understand how to evaluate and prioritise requirements in order to deliver the optimal solution. And understand the different approaches for different life cycle models, e.g. the use of MVP and MMP in iterative life cycles."
+        ]
+      },
+      {
+        num: 18, title: "Quality management",
+        description: "Understand quality management as the ability to ensure that outputs are delivered in accordance with requirements.",
+        outcomes: [
+          "Understand what is meant by quality planning, including an understanding of quality indicators and how these relate to the business case.",
+          "Knowledge of how quality control techniques are used to determine whether success criteria are met."
+        ]
+      },
+      {
+        num: 19, title: "Integrated planning",
+        description: "Understand integrated planning as the ability to incorporate multiple plans and processes into an integrated project management plan.",
+        outcomes: [
+          "Know the format for an effective integrated project management plan and its typical contents.",
+          "Understand the importance of producing an integrated project management plan."
+        ]
+      },
+      {
+        num: 20, title: "Schedule management",
+        description: "Understand schedule management as the ability to undertake time-based planning with an emphasis on activities and resource.",
+        outcomes: [
+          "Know how to define scope in terms of outputs, outcomes and benefits (including use of product, work and cost breakdown structures).",
+          "Understand there are links and dependencies between activities within a project and business-as-usual activities, for example business-as-usual activities, costs, quality, risks and scope can all impact the schedule for the project.",
+          "Understand the reasons for and benefits of re-estimating, and schedule optimisation, throughout the project life cycle."
+        ]
+      },
+      {
+        num: 21, title: "Resource management",
+        description: "Understand resource management as the ability to identify and schedule the required internal and external resources.",
+        outcomes: [
+          "Know how to determine the resources required and their availability to deliver activities within a project.",
+          "Understand how an organisational breakdown structure is used to create a responsibility assignment matrix (RACI).",
+          "Understand how resources are categorised and allocated to both linear and iterative life cycle schedules.",
+          "Know the differences between resource smoothing and resource levelling."
+        ]
+      },
+      {
+        num: 22, title: "Budgeting and cost control",
+        description: "Understand budgeting and cost control as the ability to estimate costs, develop and agree budgets and monitor actual costs against forecast costs.",
+        outcomes: [
+          "Know how to create a budget (including the use of a cost breakdown structure) and the different costs included in a budget (fixed, variable, direct, indirect etc.).",
+          "Know how to forecast and refine budgets using cost control techniques e.g. earned value.",
+          "Know how to monitor and report financial performance (including different types of financial reports).",
+          "Know how to close down finances at the end of a project."
+        ]
+      },
+      {
+        num: 23, title: "Risk and issue management",
+        description: "Understand risk and issue management as the ability to identify and monitor risks (threats and opportunities); plan responses to those risks and respond to issues.",
+        outcomes: [
+          "Understand the benefits of risk and issue management and the role of contingency planning in projects.",
+          "Understand the purpose and importance of each stage in a risk management process (such as identification, analysis, monitoring, escalation, response and closure) and an issue management process (such as logging and analysis, escalation, and assignment of actions). And understand why these stages are different for linear and iterative life cycles.",
+          "Know proactive and reactive responses to risks (such as avoid, reduce, transfer or accept and exploit, enhance, share or reject).",
+          "Understand why governance is important in risk and issue management."
+        ]
+      },
+      {
+        num: 24, title: "Change control",
+        description: "Understand change control as the ability to manage variations and change requests in a controlled way.",
+        outcomes: [
+          "Understand the purpose and importance of each stage of a typical change control process (such as request, initial evaluation, detailed evaluation, recommendation, update plans and implement). And understand where these stages are different for linear and iterative life cycles.",
+          "Know what should be captured and recorded in change requests.",
+          "Know ways to assess options related to a proposed change and the high-level impact of the proposed change.",
+          "Understand how to justify recommendations about whether to approve, reject or defer changes.",
+          "Understand the importance of updating plans and schedules to reflect and communicate changes."
+        ]
+      }
+    ]
+  }
+];
+
+// Build nav and main content
+const nav = document.getElementById('nav');
+const main = document.getElementById('main');
+
+syllabus.forEach(section => {
+  const groupId = section.group.toLowerCase().replace(/\s+/g, '-');
+  const navLink = document.createElement('a');
+  navLink.href = '#' + groupId;
+  navLink.textContent = section.group;
+  nav.appendChild(navLink);
+
+  const groupDiv = document.createElement('div');
+  groupDiv.className = 'section-group';
+  groupDiv.id = groupId;
+
+  const groupTitle = document.createElement('h2');
+  groupTitle.textContent = section.group;
+  groupDiv.appendChild(groupTitle);
+
+  section.objectives.forEach(obj => {
+    const card = document.createElement('div');
+    card.className = 'objective';
+
+    const header = document.createElement('div');
+    header.className = 'objective-header';
+    header.innerHTML = `<h3><span class="num">${obj.num}</span>${obj.title}</h3><span class="chevron">&#9660;</span>`;
+    header.addEventListener('click', () => card.classList.toggle('closed'));
+
+    const body = document.createElement('div');
+    body.className = 'objective-body';
+
+    const desc = document.createElement('p');
+    desc.className = 'description';
+    desc.textContent = obj.description;
+    body.appendChild(desc);
+
+    obj.outcomes.forEach((out, i) => {
+      const outDiv = document.createElement('div');
+      outDiv.className = 'outcome';
+      const letter = String.fromCharCode(97 + i);
+      outDiv.innerHTML = `<span class="label">${letter})</span> ${out}`;
+      body.appendChild(outDiv);
+    });
+
+    card.appendChild(header);
+    card.appendChild(body);
+    groupDiv.appendChild(card);
+  });
+
+  main.appendChild(groupDiv);
+});
+</script>
+
+</body>
+</html>
