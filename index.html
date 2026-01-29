@@ -327,7 +327,7 @@ syllabus.forEach(section => {
       const outDiv = document.createElement('div');
       outDiv.className = 'outcome';
       const letter = String.fromCharCode(97 + i);
-      outDiv.innerHTML = `<span class="label">${letter})</span> ${out}`;
+      outDiv.innerHTML = `<span class="label">LO${obj.num}${letter}</span> ${out}`;
       body.appendChild(outDiv);
     });
 
